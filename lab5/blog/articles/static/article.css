@@ -1,0 +1,50 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif; 
+    color: #ffffff;
+}
+
+.header img {
+    display: block; 
+    width: 318px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.headera img {
+    display: block; 
+    width: 318px; 
+}
+
+.articles {
+    width: 960px; 
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-right: auto;
+}
+
+.post-title a {
+    color: #ffffff;
+}
+
+.article-author { 
+    width: 50%; 
+    float: left;
+}
+
+.article-created-date { 
+    text-align: right;
+}
+
+input { 
+    text-align: center;
+    font-family: "Consolas";
+    font-weight: 400;
+    font-size: large;
+}
+
+textarea { 
+    text-align: center;
+    font-family: "Consolas";
+    font-weight: 200;
+}
