@@ -1,0 +1,113 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif; 
+    color: #ffffff;
+}
+
+img {
+    width: 318px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.header img {
+    display: block; 
+    width: 318px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.articles {
+    width: 960px; 
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-right: auto;
+}
+
+.post-title a {
+    color: #ffffff;
+}
+
+.article-author { 
+    width: 50%; 
+    float: left;
+}
+
+.article-created-date { 
+    text-align: right;
+}
+
+input { 
+    text-align: center;
+    font-family: "Consolas";
+    font-weight: 400;
+    font-size: large;
+}
+
+textarea { 
+    text-align: center;
+    font-family: "Consolas";
+    font-weight: 200;
+}
+
+.allart {
+    color: #ffffff;
+    text-align: right;
+}
+
+.one-post.folded .article-author{
+    display: none;
+}
+
+.one-post.folded .article-created-date{
+    display: none;
+}
+
+.one-post.folded .article-text{
+    display: none;
+}
+
+.one-post-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: -1;
+    opacity: 0;
+}
+
+.icons-for-parallax {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 530px;
+    position: relative;
+}
+.icons-for-parallax img {
+    position: absolute;
+    top: 0;
+}
+.icon-for-parallax-first {
+    margin-top: 200px;
+    z-index: 3;
+}
+.icon-for-parallax-second {
+    margin-top: 100px;
+    margin-left: 80px;
+    z-index: 2;
+}
+.icon-for-parallax-third{
+    margin-left: 160px;
+    z-index: 1; 
+}
+
+.header-text-area { 
+    text-align: center;
+}
+
+.main-img { 
+    text-align: center;
+    position: absolute;
+    left: 37%;
+}

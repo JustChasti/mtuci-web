@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Все статьи</title>
+        <link rel="stylesheet" href="/static/article.css">
+    </head>
+    <body>
+        <div class="header">
+            <img class="main-img" src="/static/cat.jpg" alt="No img">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="header-text-area">
+                <p class="service-title">Коллективный блог</p>
+                <a href="/user/registration/" class="register-link">Регистрация</a>
+                <a href="/user/login/" class="register-link">Вход</a>
+            </div>
+        </div>
+        <div class="icons-for-parallax">
+            <img class="icon-for-parallax-first" src="/static/11.jpg">
+            <img class="icon-for-parallax-second" src="/static/12.jpg">
+            <img class="icon-for-parallax-third" src="/static/13.jpg">
+        </div>
+        <div class="articles">
+            {% for post in posts %}
+                <div class="one-post">
+                    <h2 class="post-title"><a href="http://127.0.0.1:8000/article/{{post.id}}">{{ post.title }}</a></h2>
+                    <button class="fold-button">Cвернуть</button>
+                    <div class="article-info">
+                        <div class="article-author">{{ post.author.username }}</div>
+                        <div class="article-created-date">{{ post.created_date }}</div>
+                    </div>
+                    <p class="article-text">{{ post.get_excerpt }}</p>
+                </div>
+            {% endfor %}
+
+        </div>
+        <script src="/static/jquery-3.6.0.min.js"></script>
+        <script src="/static/parallax.js"></script>
+        <script src="/static/highlight-post.js"></script>
+        <script src="/static/fold-post.js"></script>
+    </body>        
+</html>
