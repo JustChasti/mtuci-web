@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Все статьи</title>
-        <link rel="stylesheet" href="/static/article.css">
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/article.css">
+    <title>Архив статей</title>
+  </head>
+  <body class="archive">
+    <script src="/static/jquery-3.6.0.js"></script>
+    <script src="/static/highlight-post.js"></script>
+    <script src="/static/fold-post.js"></script>
     <body>
-        <div class="header">
-            <img class="header-img" src="/static/cat.jpg" alt="No img">
-        </div>
-        <div class="articles">
-            {% for post in posts %}
-                <div class="one-post">
-                    <h2 class="post-title"><a href="http://127.0.0.1:8000/article/{{post.id}}">{{ post.title }}</a></h2>
-                    <button class="fold-button">Cвернуть</button>
-                    <div class="article-info">
-                        <div class="article-author">{{ post.author.username }}</div>
-                        <div class="article-created-date">{{ post.created_date }}</div>
-                    </div>
-                    <p class="article-text">{{ post.get_excerpt }}</p>
-                    <div class="one-post-shadow"></div>
-                </div>
-            {% endfor %}
+      <div class="header">
+        <img class="header-img" src="/static/cat.jpg" alt="No img">
+      </div>
 
+      <div class="archive">
+        {% for post in posts %}
+        <div class="one-post">
+        <h2 class="post-title"><a href="http://127.0.0.1:8000/article/{{post.id}}">{{ post.title }}</a></h2>
+        <button class="fold-button">Cвернуть</button>
+        <div class="article-info">
+            <div class="article-author">{{ post.author.username }}</div>
+            <div class="article-created-date">{{ post.created_date }}</div>
         </div>
-        <script src="/static/jquery-3.6.0.min.js"></script>
-        <script src="/static/highlight-post.js"></script>
-        <script src="/static/fold-post.js"></script>
-    </body>        
+        <p class="article-text">{{ post.get_excerpt }}</p>
+        <div class="one-post-shadow"></div>
+        </div>
+      </div>
+      {% endfor %}
+    </body>
+  </body>
 </html>

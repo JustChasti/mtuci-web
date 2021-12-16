@@ -1,17 +1,17 @@
-var foldBtns = document.getElementsByClassName("fold-button");
-for (var i = 0; i<foldBtns.length; i++){
-    foldBtns[i].addEventListener("click", function(e) {
-        if (e.target.className == "fold-button folded"){
-            e.target.innerHTML = "свернуть";
-            e.target.className = "fold-button";
-            var displayState = "block";
-            e.target.parentElement.className = "one-post";
+window.addEventListener("DOMContentLoaded", () => {
+    const wrappers = document.querySelector(".archive");
+  
+    wrappers.addEventListener("click", (e) => {
+      target = e.target;
+      if (target && target.matches(".fold-button")) {
+        if (target.parentElement.classList.contains("folded")) {
+          target.innerHTML = "Свернуть";
+          target.parentElement.classList.remove("folded");
+        } else {
+          console.log(target.parentElement);
+          target.innerHTML = "Развернуть";
+          target.parentElement.classList.add("folded");
         }
-        else{
-            e.target.innerHTML = "развернуть";
-            e.target.className = "fold-button folded";
-            var displayState = "none"
-            e.target.parentElement.className = "one-post folded";
-        }
+      }
     });
-}
+});

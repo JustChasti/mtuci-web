@@ -16,13 +16,6 @@ body {
     width: 318px; 
 }
 
-.articles {
-    width: 960px; 
-    margin-top: 5%;
-    margin-left: 35%;
-    margin-right: auto;
-}
-
 .post-title a {
     color: #ffffff;
 }
@@ -48,7 +41,15 @@ textarea {
     font-family: "Consolas";
     font-weight: 200;
 }
+  
+.archive .one-post {
+    position: relative;
+    width: 960px; 
+    margin-left: 35%;
+    margin-right: auto;
+}
 
+  
 .allart {
     color: #ffffff;
     text-align: right;
@@ -65,7 +66,7 @@ textarea {
 .one-post.folded .article-text{
     display: none;
 }
-
+  
 .one-post-shadow {
     position: absolute;
     top: 0;
@@ -75,4 +76,4 @@ textarea {
     background: black;
     z-index: -1;
     opacity: 0;
-  }
+}
